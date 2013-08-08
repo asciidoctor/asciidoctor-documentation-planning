@@ -19,7 +19,7 @@ Do you have ideas about how to:
 * outline and structure user-friendly manuals?
 * write, edit, automate, deploy, etc. documentation?
 
-If so, don't hesitate to file an issue, start a wikipage, fork this repo, or join the discussion xoxoxo on the mailing list.
+If so, don't hesitate to file an issue, start a wikipage, fork this repo, or join the discussion *link pending* on the mailing list.
 
 == Overview
 
