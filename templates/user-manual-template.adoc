@@ -1,0 +1,57 @@
+= User Manual Template
+Sarah White
+
+CAUTION: This template is not finalized! It is a working draft, and it would love your input!
+
+A User Manual is a complete reference guide describing how to use the application.
+
+The User Manual contains: 
+
+* Describes each feature of the application, its benefit(s), and how to use it
+* Define attributes, options, styles, and configurations
+* Supports the features with executable examples
+* Screenshots and complete code examples are the best way to show the user what to expect and how to do it
+* Troubleshooting tips
+* Excellent, intuitive navigation (table of contents, index, clear next steps)
+
+*Audience* 
+
+New and experienced users of all technical backgrounds
+
+*Writing style*
+
+Conversational and detailed
+
+.User Manual Template
+----
+= Title page
+
+== Copyright and license page
+
+== How to navigate the manual
+
+== Table of Contents
+
+== Description of the primary benefits and supporting features of the application.
+
+== Quick start chapter(s)
+
+== Individual Chapters 
+
+Each chapter concentrates on a benefit of the application.
+
+A chapter includes:
+* robust, working examples
+* definitions 
+* associated attributes, options, styles
+* output and backend variation considerations
+* troubleshooting steps and solutions
+
+== FAQ (Frequently Asked Questions)
+
+== Additional resources list
+
+== Glossary
+
+== Index
+----
