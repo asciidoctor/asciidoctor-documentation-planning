@@ -1,0 +1,66 @@
+= README Template
+Sarah White
+
+CAUTION: This template is not finalized! It is a working draft, and it would love your input!
+
+The README is the minimum amount of documentation that is packaged with a gem or project.
+It is also part of the project's landing page on GitHub.
+
+*Audience* 
+
+All levels of users and developers
+
+*Writing style*
+
+The README should be concisely written.
+However, it should be compelling and informative, as it will be the first document describing what your project does that many potential users will see.
+
+* Make sure to define terms and acronyms.
+
+.README Template
+----
+== Overview
+
+* Brief description of the project's purpose and main benefit(s)
+* The types of users this project helps
+* Link(s) to other primary help documents and resources
+
+== Operating systems and/or platforms it runs on
+
+Be brief, provide links to more detailed documentation
+
+== Dependency and configuration requirements
+
+Be brief, provide links to more detailed documentation
+
+== List of files/directory structure
+
+Optional depending on the complexity of the project
+
+== Basic installation instructions
+
+Be brief, provide links to more detailed documentation
+
+== Basic usage instructions
+
+Be brief, provide links to more detailed documentation
+
+== Copyright and licensing information
+
+== Author(s)
+
+== Thanks, acknowledgements, and credits
+
+== Basic contact and help information
+
+Provide links
+
+== Bugs
+
+* List of known bugs
+* Instructions on reporting new bugs
+
+== Changelog
+
+== Basic contributing instructions
+----
