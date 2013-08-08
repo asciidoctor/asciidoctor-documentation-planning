@@ -1,0 +1,106 @@
+= Asciidoctor Documentation
+:homepage: http://asciidoctor.org
+:asciidoc: http://asciidoc.org
+:sources: https://github.com/asciidoctor/asciidoctor
+:issues: https://github.com/asciidoctor/asciidoctor/issues
+:forum: http://discuss.asciidoctor.org
+:org: https://github.com/asciidoctor
+
+CAUTION: *The information and processes in this README are being brainstormed and discussed. 
+They have not been implemented!*
+
+But speaking of brainstorming, we're looking for people to add some *thunder and lightning*!
+
+Do you have ideas about how to: 
+
+* automate documentation so code and references stay up-to-date?
+* flag and tag documents according to versions?
+* link source code to documents across repositories?
+* outline and structure user-friendly manuals?
+* write, edit, automate, deploy, etc. documentation?
+
+If so, don't hesitate to file an issue, start a wikipage, fork this repo, or join the discussion xoxoxo on the mailing list.
+
+== Overview
+
+The Asciidoctor Documentation project's goal is to stage, build, store, and distribute the content and documents relevant to the organization and its projects.
+
+This repository maintains:
+
+* Writer's guide
+* Contributor manual
+* Documentation guidelines
+* Document building instructions
+* Tutorials (website)
+* Additional learning materials (presentations, etc.)
+* Collateral
+
+Additionally, the Documentation project will link to and distribute the content created by each project in the organization.
+
+Each project in the Asciidoctor organization maintains:
+
+* Install and use quick start
+* User manual
+* Technical manual
+* Syntax and code dictionary
+* README
+
+The core repository maintains:
+
+* Syntax writing quick start
+
+== Workflow
+
+* Each project repository in the Asciidoctor organization will have its own documentation, which will be stored in a top level file named `docs`.
+* Screenshots, images, figures, etc. for the documentation will be stored in `docs\assets\`.
+* Code snippets and examples should be linked and automatically extracted from the source code or test cases to ensure accuracy.
+* The code must be tested.
+* The Asciidoctor Documentation repository will build each projects' documentation for publication on the Asciidoctor website.
+* It will also build additional and alternate forms of documentation from content and code flagged and included throughout the repositories.
+
+// == Dependency and configuration requirements
+
+// Be brief, provide links to more detailed documentation
+
+== Directory structure
+
+Pending
+
+== Contributing instructions
+
+Pending
+
+== Build instructions
+
+Pending
+
+// == Copyright and licensing information
+
+// == Author(s)
+
+// == Thanks, acknowledgements, and credits
+
+== Contact and help information
+
+Project home page:: {homepage}
+
+Source repository:: {sources}
+
+Issue tracker:: {issues}
+
+Mailinglist / forum:: {forum}
+
+GitHub organization:: {org}
+
+////
+== Bugs
+
+* List of known bugs
+* Instructions on reporting new bugs
+
+== Changelog
+////
+
+
+
+
