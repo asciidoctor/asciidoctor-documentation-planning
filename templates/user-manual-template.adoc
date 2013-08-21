@@ -1,27 +1,49 @@
-= User Manual Template
+= User Manual Guide and Template
 Sarah White
 
 CAUTION: This template is not finalized! It is a working draft, and it would love your input!
 
-A User Manual is a complete reference guide describing how to use the application.
+A User Manual is a complete reference guide describing *how to use the application*.
 
-The User Manual contains: 
+The User Manual: 
 
-* Describes each feature of the application, its benefit(s), and how to use it
-* Define attributes, options, styles, and configurations
-* Supports the features with executable examples
-* Screenshots and complete code examples are the best way to show the user what to expect and how to do it
-* Troubleshooting tips
-* Excellent, intuitive navigation (table of contents, index, clear next steps)
+* describes each feature of the application, its benefits, and how to use the features that support each benefit
+* defines terms, processes, attributes, options, styles, and configurations
+* supports the processes and features showcased with executable code examples and screenshots
+* provides troubleshooting tips
+* provides clear, intuitive navigation directing readers to the next usage step(s) and additional resources
 
-*Audience* 
+== Audience
 
-New and experienced users of all technical backgrounds
+New, intermediate, and experienced users of all technical backgrounds
 
-*Writing style*
+== Writing style
 
-Conversational and detailed
+*General*
 
+* Conversational
+* Step-by-step directions (don't make assumptions about the users knowledge level or setup that you don't state clearly at the beginning of the lesson)
+* Abundant executable code examples with callouts and/or screenshots (the best way to show the user what to expect and how to do it)
+
+*Chapters and Sections*
+
+Each chapter and section concentrates on a benefit of the application.
+
+To explain each benefit and its features, each chapter and section should include:
+
+* working examples
+* definitions 
+* associated attributes, options, styles
+* output and backend variation considerations
+* troubleshooting steps and solutions
+
+== Template
+
+The template below lays out the basic structure of the Asciidoctor Core user manual.
+
+Text marked by +==+ indicates a page or chapter title.
+Text marked by +===+ or more designates sections within that chapter.
+ 
 .User Manual Template
 ----
 = Title page
@@ -32,26 +54,194 @@ Conversational and detailed
 
 == Table of Contents
 
-== Description of the primary benefits and supporting features of the application.
+Part 1: Introduction to Asciidoctor
 
-== Quick start chapter(s)
+== What is Asciidoctor?
 
-== Individual Chapters 
+=== Major benefits
 
-Each chapter concentrates on a benefit of the application.
+Describe the primary benefits and supporting features of the application.
 
-A chapter includes:
-* robust, working examples
-* definitions 
-* associated attributes, options, styles
-* output and backend variation considerations
-* troubleshooting steps and solutions
+=== Compare to MarkDown
+
+=== Compare to AsciiDoc
+
+Part 2: Quick starts
+
+== Installation quick start
+
+== Usage quick start
+
+== Syntax quick start
+
+== Custom backend quick start
+
+Part 3: Getting started
+
+== Installation
+
+=== Installation requirements
+
+=== Getting and installing the gem
+
+=== Extensions and options
+
+== Commandline usage
+
+=== Basic commands
+
+=== From --help
+
+== API Usage
+
+=== Basic commands
+
+== Output formats
+
+Part 4: Writing your content
+
+== Text Editor
+
+== Basic document anatomy
+
+=== Header, Title and Author
+
+=== Text and Paragraphs
+
+==== Substitutions
+
+=== Sections
+
+=== Links and Cross references
+
+== Content Types
+
+=== Lists
+
+=== Tables
+
+=== Blocks
+
+=== Admonitions
+
+=== Images and Videos
+
+Part 5: Enriching your content
+
+== Attributes
+
+=== Document attributes
+
+== Metadata
+
+=== Chunking
+
+== Sourcecode highlighting
+
+== Icons and Callouts
+
+== Images Dir
+
+== Includes
+
+Part 6: Navigating and referencing your content
+
+== Mapping content
+
+=== Table of Contents
+
+=== Section links
+
+=== Index
+
+== Referencing content
+
+=== Footnotes
+
+=== Bibliography
+
+Part 7: Preparing your content for production
+
+== Previewing your content
+
+=== Guard/Live viewer
+
+== Output selection
+
+List most options here but only go in depth on the common ones
+
+=== HTML
+
+=== DocBook
+
+* 5.0
+* 4.5
+
+=== PDF
+
+== Slideshows
+
+=== Deck.js
+
+== Custom backends
+
+== Stylesheets
+
+=== Default
+
+=== Stylesheet factory
+
+=== Custom stylesheets
+
+== Styling DocBook and PDF output
+
+Part 8: Producing and publishing your content
+
+== Production
+
+=== Locally
+
+=== Multipart books and large documents
+
+== Publishing
+
+=== Repositories
+
+=== Static website generators
+
+Part 9: Conversions and migrations
+
+== Converting Markdown *to* Asciidoctor
+
+== Migrating from AsciiDoc to Asciidoctor
+
+Part 10: Build integrations and implementations
+
+== Java
+
+== Gradle
+
+== Maven
+
+== JavaDoc
+
+== Javascript
+
+== Yard
+
+== Rdoc
+
+Part 11: Conclusion
+
+Part 12: Resources
 
 == FAQ (Frequently Asked Questions)
 
 == Additional resources list
 
 == Glossary
+
+== Appendices
 
 == Index
 ----
