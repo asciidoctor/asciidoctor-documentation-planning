@@ -1,0 +1,87 @@
+= Tutorial Guide and Template
+Sarah White
+
+Tutorials demonstrate how to do something, such as complete a task, use a feature, run a process, or navigate an interface.
+
+== Audience
+
+Targets general new users and new users of advanced topics
+
+== Writing style
+
+*General*
+
+* Concise
+* Conversational
+* Keep the scope narrow
+
+*Title*
+
+The title of the tutorial should directly state the goal of the tutorial.
+The tutorial's goal should be narrow and specific.
+
+Yes:
+
+ How to insert and style images in your document.
+
+Yes: 
+
+ How to highlight sourcecode in your document.
+ 
+No:
+
+ How to use Asciidoctor.
+
+*Purpose*
+
+Simply state the purpose of the feature or process you will be demonstrating.
+Make sure to define any terms that new users may not be familiar with.
+Mention any prerequisites the user needs.
+
+*Demonstration*
+
+* Detailed step-by-step instructions demonstrating the tutorial's goal 
+* Ambiguity kills tutorials
+* Don't make assumptions about the users knowledge level or setup that you don't state clearly at the beginning of the lesson
+* Executable code examples with callouts and/or screenshots (the best way to show the user what to expect and how to do it)
+
+*Review*
+
+Briefly conclude the tutorial by reminding the user what they learned and then direct them to the next tutorial and additional resources.
+
+== Template
+
+The template below lays out the basic structure of a tutorial.
+
+Text marked by +==+ indicates a major topic.
+Text marked by +===+ or more designates steps within the topic.
+
+.Tutorial template
+----
+= Tutorial title
+
+== Purpose/definition of the process, feature, etc. that will be explained
+
+== Step-by-step demonstration
+
+* steps are typically best shown as examples and screenshots
+* use callouts
+
+=== Step 1
+
+=== Step 2
+
+=== Step 3
+
+=== Step X
+
+== Review/Reiterate tutorial goal and what reader learned
+
+== Navigation to next tutorial and/or links to additional resources
+----
+
+== Testing
+
+Once you've written your tutorial, try it out.
+Follow the steps you wrote, word for word, to ensure that you didn't forget any details.
+Better yet, ask someone else to follow it and provide feedback.
