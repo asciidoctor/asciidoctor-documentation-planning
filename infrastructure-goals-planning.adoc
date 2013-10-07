@@ -11,7 +11,7 @@ Sarah White
 :infinispan-web-repo: https://github.com/infinispan/infinispan.github.io
 
 The Asciidoctor Organization is an incredibly creative community, and we want it to continue to innovate and expand.
-Infrastructure can support or hinder a community.
+A project's infrastructure can support or hinder a community.
 For this reason, we would like to implement an organizational infrastructure that is focused on the following goals:
 
 * Making contributing to and using the Asciidoctor project and modules unambiguous and fun
@@ -21,9 +21,9 @@ For this reason, we would like to implement an organizational infrastructure tha
 
 The infrastructure should not burden the Asciidoctor contributors while it streamlines the delivery of up-to-date resources to the Asciidoctor users.
 
-To build such an infrastructure requires input and feedback from the contributors and some trial and error.
+To build such an infrastructure requires input and feedback from the contributors and some iteration trial and error.
 
-Dan and I have put together information, suggestions and questions on topics ranging from <<release-numbering>> to <<automation-workflow,documentation automation workflow>> to get this infrastructure conversation party started.
+Dan and I have put together information, suggestions and questions on topics ranging from <<release-numbering,release numbering>> to <<automation-workflow,documentation automation workflow>> to get this infrastructure conversation party started.
 
 == Release Numbering
 
@@ -33,7 +33,7 @@ The next major release of Asciidoctor Core will be 1.5.0.
 
 Major number changes indicate numerous new features and possible infrastructure and architecture changes to the software.
 
-. Must they be backward or forward compatible?
+. Must major releases be backward or forward compatible?
 . Must they be backward or forward compatible with the current major release of Asciidoctor Core and the modules?
 
 Minor numbers indicate a few new features.
@@ -45,7 +45,7 @@ Minor numbers indicate a few new features.
 
 Micro numbers are backward or forward compatible and contain bug fixes and patches.
 
-. Would micro numbers also include new features?
+. Would micro number releases also include new features?
 . Must they be backward or forward compatible with the current major release of Asciidoctor Core and the modules?
 
 === Compatibility
@@ -59,7 +59,7 @@ Asciidoctor Core has issued release candidates (RC) in the past.
 If we continue this practice the next major release candidate of Asciidoctor Core will be 1.5.0.rc1.
 
 . Is this a practice we want to continue?
-. If so, what would be the criteria, workflow and timeline?
+. If so, what would be the criteria, workflow and timeline for creating and cutting a release candidate?
 . Would the modules also cut release candidates?
 
 == Release Branches
@@ -69,12 +69,12 @@ In order to maintain stable snapshots of the release versions and their associat
 The next Asciidoctor Core release branch would be named 1.5.X.
 The X is used to name the branch because all micro number releases for 1.5 will also occur on this branch.
 
-When 1.5.O is ready for release, a snapshot of the 1.5.X branch is tagged as 1.5.0. 
+When 1.5.0 is ready for release, a snapshot of the 1.5.X branch is tagged as 1.5.0. 
 Subsequent micro releases are created and tagged on the same branch.
 
 Minor number releases are branched from master, not from other release branches.
 
-This workflow allows for new features destined for the the next minor or major release can be developed while bug fixes can be applied and deployed to the current and past releases. 
+This workflow allows for new features destined for the next minor or major release to be developed while bug fixes are applied and deployed to the current and past releases. 
 
 == Release Criteria
 
@@ -83,13 +83,13 @@ This workflow allows for new features destined for the the next minor or major r
 
 A release can be tagged when the following items have been completed:
 
-* Branch code has been tested per release number requirements (i.e. micro number release is backward and forward compatible with Core and/or modules).
-* README has been updated
-* Changelog has been generated
-* User Manual has been updated to reflect changes and/or new features
-* Technical Manual has been updated to reflect changes and/or new features
-* RDoc (or applicable API doc generator) generated
-* Release announcement has been drafted and staged for publication on the website (this may not apply to all releases)
+* Branch code tested per release number requirements (i.e. micro number release is backward and forward compatible with Core and/or modules).
+* README updated
+* Changelog generated
+* User Manual updated to reflect changes and/or new features
+* Technical Manual updated to reflect changes and/or new features
+* RDoc (or applicable API documentation) generated
+* Release announcement drafted and staged for publication on the website (this may not apply to all releases)
 
 The <<documentation,Documentation section>> expands on creating, updating and automating the documents listed above. 
 Content guides for the documents listed above are under discussion and development in the {templates-ref}[Documentation repository].
@@ -103,8 +103,8 @@ Content guides for the documents listed above are under discussion and developme
 
 . Are the directions for creating the rubygem documented?
 . Does this process need to be modified or streamlined?
-. Are their other modules we would like to release as a rubygem?
-. If so, how would we coordinate or integrate that with the Core rubygem?
+. Are their other organization repositories we would like to release as a rubygem?
+. If so, how would we coordinate or integrate them with the Core rubygem?
 
 The Asciidoctor Core rubygem contains the source code, README, Changelog, and License.
 
@@ -119,7 +119,7 @@ The build materials and instructions for packaging the Fedora RPM are hosted in 
 . Are there other modules we would like to package?
 . If so, how would we coordinate or integrate that with the Core rubygem package?
 
-Additionally, are there any extra steps we want to take (if applicable) to smooth installation on Windows or Mac?
+Additionally, are there any extra steps we want to take (if applicable) to ease installation on Windows or Mac?
 
 == Documentation
 
@@ -128,7 +128,7 @@ This improves accuracy and maintainability.
 
 Therefore, the current documentation, which is stored in the {website-ref}[Asciidoctor website repository] will be transferred to its related code repository.
 
-Asciidoctor Core and each module repository will store and maintain its own:
+Each project and Asciidoctor Core will store and maintain its own:
 
 * Installation and usage quick start
 * User manual
@@ -143,26 +143,26 @@ The Core repository will also store and maintain the:
 
 * Syntax writing quick start
 
-We also want to be able to publish the same content via a variety of channels.
+We also want to publish the same content via a variety of channels.
 
-For example, the directions for installing Asciidoctor Core should be written in one source document, but then published in the README, User Manual, Installation Quick start, blog posts, etc.
+For example, the directions for installing Asciidoctor Core should be written in one source document, but then published in the README, User Manual, Installation Quick Start, blog posts, etc.
 
-And we also want to create content that uses documentation from several repositories.
+And we want to create content that uses documentation from several repositories.
 
 For example, the Asciidoctor User Manual will include documentation from every module and Asciidoctor Core.
 
 To facilitate the cross-repository building of documentation and its distribution, we set up the {docs-ref}[Asciidoctor Documentation repository].
 
-The Asciidoctor Documentation repository will distribute each projects' documentation for publication on the Asciidoctor website.
+The Asciidoctor Documentation repository will distribute each project's documentation for publication on the Asciidoctor website.
 It will build additional and alternate forms of documentation from content and code flagged and included throughout the repositories.
 
 The Documentation repository will maintain the:
 
 * General documentation guidelines
 * General document building instructions
-* Asciidoctor Organization documents (such as this roadmap)
+* Asciidoctor Organization documents (such as this planning document)
 * {templates-ref}[Content guides and templates] for writing READMEs, changelogs, manuals, tutorials, etc.
-* Source documents for building documents that include documentation from multiple repositories
+* Source code for building documents that include documentation from multiple repositories
 * Writer's guide
 * General contributor manual
 * General developer guidelines
@@ -173,14 +173,14 @@ The Documentation repository will maintain the:
 
 === Automation workflow
 
-The directory organization of the documentation within each repository should be somewhat consistent among the repositories in order to automate testing and building of the documentation sources.
+The documentation directory structure within each repository should be somewhat consistent in order to automate the building of the distributed documentation.
 
-Each repositories' documentation will be stored in a top level file named `docs`.
+A repository's documentation will be stored in a top level file named `docs`.
 Any screenshots, images, figures, etc. for the documentation will be stored in `docs\assets\`.
 
 . Is this directory structure applicable to Gemfiles and the Java repositories?
 
-In order to improve the timeliness and accuracy of the code snippets and examples included in the documentation:
+In order to improve the timeliness and accuracy of code snippets and examples included in the documentation:
 
 * Code snippets and examples should be linked and extracted from the source code or test cases so that the documentation is updated when the code is updated.
 * The example code must be tested.
