@@ -1,0 +1,215 @@
+= Infrastructure Goals and Planning
+Sarah White
+:rubygem-ref: http://guides.rubygems.org/make-your-own-gem/
+:templates-ref: https://github.com/asciidoctor/asciidoctor-documentation/tree/master/templates
+:docs-ref: https://github.com/asciidoctor/asciidoctor-documentation
+:rpm-ref: https://github.com/asciidoctor/rubygem-asciidoctor-rpm
+:website-ref: https://github.com/asciidoctor/asciidoctor.org
+:config-ref: https://github.com/infinispan/infinispan.github.io/blob/develop/_config/ispn.yml
+:fetch-ref: https://github.com/infinispan/infinispan.github.io/blob/develop/bin/fetch_docs.rb
+:publish-ref: https://github.com/infinispan/infinispan.github.io/blob/develop/bin/publish_production.sh
+:infinispan-web-repo: https://github.com/infinispan/infinispan.github.io
+
+The Asciidoctor Organization is an incredibly creative community, and we want it to continue to innovate and expand.
+Infrastructure can support or hinder a community.
+For this reason, we would like to implement an organizational infrastructure that is focused on the following goals:
+
+* Making contributing to and using the Asciidoctor project and modules unambiguous and fun
+* Writing and distributing accurate and complete documentation
+* Testing everything
+* Automating tests, builds, release processes, documentation, and anything else we can possibly think of!
+
+The infrastructure should not burden the Asciidoctor contributors while it streamlines the delivery of up-to-date resources to the Asciidoctor users.
+
+To build such an infrastructure requires input and feedback from the contributors and some trial and error.
+
+Dan and I have put together information, suggestions and questions on topics ranging from <<release-numbering>> to <<automation-workflow,documentation automation workflow>> to get this infrastructure conversation party started.
+
+== Release Numbering
+
+Release numbers can consist of a major, minor, and micro number.
+
+The next major release of Asciidoctor Core will be 1.5.0.
+
+Major number changes indicate numerous new features and possible infrastructure and architecture changes to the software.
+
+. Must they be backward or forward compatible?
+. Must they be backward or forward compatible with the current major release of Asciidoctor Core and the modules?
+
+Minor numbers indicate a few new features.
+
+. Would minor numbers also include bug fixes?
+. Could they include incompatible changes?
+. Must they be backward or forward compatible?
+. Must they be backward or forward compatible with the current major release of Asciidoctor Core and the modules?
+
+Micro numbers are backward or forward compatible and contain bug fixes and patches.
+
+. Would micro numbers also include new features?
+. Must they be backward or forward compatible with the current major release of Asciidoctor Core and the modules?
+
+=== Compatibility
+
+. How do we define backward and forward compatible for Asciidoctor Core and for the modules?
+
+== Release Candidates
+
+Asciidoctor Core has issued release candidates (RC) in the past.
+
+If we continue this practice the next major release candidate of Asciidoctor Core will be 1.5.0.rc1.
+
+. Is this a practice we want to continue?
+. If so, what would be the criteria, workflow and timeline?
+. Would the modules also cut release candidates?
+
+== Release Branches
+
+In order to maintain stable snapshots of the release versions and their associated documentation, the major number releases should be branched off of the master code base.
+
+The next Asciidoctor Core release branch would be named 1.5.X.
+The X is used to name the branch because all micro number releases for 1.5 will also occur on this branch.
+
+When 1.5.O is ready for release, a snapshot of the 1.5.X branch is tagged as 1.5.0. 
+Subsequent micro releases are created and tagged on the same branch.
+
+Minor number releases are branched from master, not from other release branches.
+
+This workflow allows for new features destined for the the next minor or major release can be developed while bug fixes can be applied and deployed to the current and past releases. 
+
+== Release Criteria
+
+. How will we plan releases?
+. How will we determine when a release should be tagged?
+
+A release can be tagged when the following items have been completed:
+
+* Branch code has been tested per release number requirements (i.e. micro number release is backward and forward compatible with Core and/or modules).
+* README has been updated
+* Changelog has been generated
+* User Manual has been updated to reflect changes and/or new features
+* Technical Manual has been updated to reflect changes and/or new features
+* RDoc (or applicable API doc generator) generated
+* Release announcement has been drafted and staged for publication on the website (this may not apply to all releases)
+
+The <<documentation,Documentation section>> expands on creating, updating and automating the documents listed above. 
+Content guides for the documents listed above are under discussion and development in the {templates-ref}[Documentation repository].
+
+=== Testing criteria
+
+. What are the testing requirements for Asciidoctor Core and the modules?
+. Who is responsible for testing?
+
+== Releasing the Rubygem
+
+. Are the directions for creating the rubygem documented?
+. Does this process need to be modified or streamlined?
+. Are their other modules we would like to release as a rubygem?
+. If so, how would we coordinate or integrate that with the Core rubygem?
+
+The Asciidoctor Core rubygem contains the source code, README, Changelog, and License.
+
+Reference: RubyGems Guide:{rubygem-ref}[Make your own gem]
+
+=== Packaging the rubygem
+
+Once the rubygem has been published, it is subsequently packaged for Fedora and Debian.
+The build materials and instructions for packaging the Fedora RPM are hosted in the {rpm-ref}[RPM repository].
+
+. Does this process need to be modified or streamlined?
+. Are there other modules we would like to package?
+. If so, how would we coordinate or integrate that with the Core rubygem package?
+
+Additionally, are there any extra steps we want to take (if applicable) to smooth installation on Windows or Mac?
+
+== Documentation
+
+Like code, documentation should only be written in one place.
+This improves accuracy and maintainability.
+
+Therefore, the current documentation, which is stored in the {website-ref}[Asciidoctor website repository] will be transferred to its related code repository.
+
+Asciidoctor Core and each module repository will store and maintain its own:
+
+* Installation and usage quick start
+* User manual
+* Technical manual
+* Syntax and code dictionary
+* README
+* Changelog
+* License
+* Specific contribution instructions
+
+The Core repository will also store and maintain the:
+
+* Syntax writing quick start
+
+We also want to be able to publish the same content via a variety of channels.
+
+For example, the directions for installing Asciidoctor Core should be written in one source document, but then published in the README, User Manual, Installation Quick start, blog posts, etc.
+
+And we also want to create content that uses documentation from several repositories.
+
+For example, the Asciidoctor User Manual will include documentation from every module and Asciidoctor Core.
+
+To facilitate the cross-repository building of documentation and its distribution, we set up the {docs-ref}[Asciidoctor Documentation repository].
+
+The Asciidoctor Documentation repository will distribute each projects' documentation for publication on the Asciidoctor website.
+It will build additional and alternate forms of documentation from content and code flagged and included throughout the repositories.
+
+The Documentation repository will maintain the:
+
+* General documentation guidelines
+* General document building instructions
+* Asciidoctor Organization documents (such as this roadmap)
+* {templates-ref}[Content guides and templates] for writing READMEs, changelogs, manuals, tutorials, etc.
+* Source documents for building documents that include documentation from multiple repositories
+* Writer's guide
+* General contributor manual
+* General developer guidelines
+* FAQ
+* Tutorials (which will be released to the website)
+* Additional learning materials (presentations, etc.) that are cross-repository
+* Project collateral
+
+=== Automation workflow
+
+The directory organization of the documentation within each repository should be somewhat consistent among the repositories in order to automate testing and building of the documentation sources.
+
+Each repositories' documentation will be stored in a top level file named `docs`.
+Any screenshots, images, figures, etc. for the documentation will be stored in `docs\assets\`.
+
+. Is this directory structure applicable to Gemfiles and the Java repositories?
+
+In order to improve the timeliness and accuracy of the code snippets and examples included in the documentation:
+
+* Code snippets and examples should be linked and extracted from the source code or test cases so that the documentation is updated when the code is updated.
+* The example code must be tested.
+//
+
+. How will we flag source code for inclusion?
+. How will we test the code included in the documentation?
+. How will the documentation know when source code has changed and the document needs to rebuild?
+
+In order to build the documentation for the website, we can create scripts similar to the Infinispan project's.
+
+These scripts are stored in the {infinispan-web-repo}[Infinispan website repository]:
+
+* Configuration script dictating what to publish: {config-ref}[ispn.yml]
+* Script for retrieving the documentation from the repositories: {fetch-ref}[fetch_docs.rb]
+* Script to publish the documentation and website: {publish-ref}[publish_production.sh]
+
+== Issues
+
+Wording issues and commits to make generating the changelog as painless as possible...
+
+== Code comments
+
+Wording comments in the code to create great technical documentation...
+
+== Next steps
+
+Feed me, Seymour!
+
+
+
+
