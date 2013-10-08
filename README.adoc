@@ -1,6 +1,8 @@
 = Asciidoctor Documentation
+:infra-ref: https://github.com/asciidoctor/asciidoctor-documentation/blob/master/infrastructure-goals-planning.adoc
+:templates-ref: https://github.com/asciidoctor/asciidoctor-documentation/tree/master/templates
+:issue-docs: https://github.com/asciidoctor/asciidoctor-documentation/issues?state=open
 :homepage: http://asciidoctor.org
-:asciidoc: http://asciidoc.org
 :sources: https://github.com/asciidoctor/asciidoctor
 :issues: https://github.com/asciidoctor/asciidoctor/issues
 :forum: http://discuss.asciidoctor.org
@@ -23,72 +25,99 @@ If so, don't hesitate to file an issue, start a wikipage, fork this repo, or joi
 
 == Overview
 
-The Asciidoctor Documentation project's goal is to stage, build, store, and distribute the content and documents relevant to the organization and its projects.
+The Asciidoctor Documentation project's goal is to build, store, and distribute the content relevant to the Asciidoctor organization and its projects.
 
-This repository maintains:
+This repository will store and maintain the:
 
+* General documentation guidelines
+* General document building instructions
+* Asciidoctor Organization documents (such as the {infra-ref}[Infrastructure Goals and Planning] document)
+* {templates-ref}[Content guides and templates] for writing READMEs, changelogs, manuals, tutorials, etc.
+* Source code for building documents that include content from multiple repositories
 * Writer's guide
-* Contributor manual
-* Documentation guidelines
-* Document building instructions
-* Tutorials (website)
-* Additional learning materials (presentations, etc.)
-* Collateral
+* General contributor manual
+* General developer guidelines
+* FAQ
+* Tutorials (which will be released to the website)
+* Additional learning materials (presentations, etc.) that are cross-repository
+* Project collateral
 
-Additionally, the Documentation project will link to and distribute the content created by each project in the organization.
+Additionally, the Asciidoctor Documentation repository will distribute each project's documentation for publication on the Asciidoctor website.
+It will build additional and alternate forms of documentation from content and code flagged and included throughout the repositories.
 
-Each project in the Asciidoctor organization maintains:
+== Asciidoctor Documentation repository structure
 
-* Install and use quick start
+The `asciidoctor-documentation` directory contains:
+
+* {readme-repo}[README]
+* {infra-ref}[Infrastructure Goals and Planning]
+* {templates-ref}[`/templates` directory]
+** {templates-ref}/readme-template.adoc[README guide and template]
+** {templates-ref}/release-notes-template.adoc[Release Notes guide and template]
+** {templates-ref}/tutorial-template.adoc[Tutorial guide and template]
+** {templates-ref}/user-manual-template.adoc[User Manual guide and template]
+
+[horizontal]
+README:: Purpose and description of the Asciidoctor Documentation project
+
+Infrastructure Goals and Planning:: Planning document outlining information, suggestions, and questions about building the Asciidoctor organization's infrastructure.
+
+Templates directory:: Location of the content guides and templates for writing READMEs, changelogs, manuals, tutorials, etc.
+
+README guide and template:: Style and structure suggestions for a project's README.
+
+Release notes guide and template:: Style and structure suggestions for a project's release notes.
+
+Tutorial guide and template:: Style and structure suggestions for a project's tutorials.
+
+User manual guide and template:: Style and structure suggestions for a project's user manual.
+
+NOTE: Many more guides and templates are planned, checkout the ideas and requests filed in the {issue-docs}[issue tracker] for more information.
+
+== Documentation for Asciidoctor core and other Asciidoctor organization projects
+
+Each project within the Asciidoctor organization and Asciidoctor core will store and maintain its own:
+
+* Installation and usage quick start
 * User manual
 * Technical manual
 * Syntax and code dictionary
 * README
+* Changelog
+* License
+* Specific contribution instructions
 
-The core repository maintains:
+The core repository will also store and maintain the:
 
 * Syntax writing quick start
-
-== Workflow
-
-* Each project repository in the Asciidoctor organization will have its own documentation, which will be stored in a top level file named `docs`.
-* Screenshots, images, figures, etc. for the documentation will be stored in `docs\assets\`.
-* Code snippets and examples should be linked and automatically extracted from the source code or test cases to ensure accuracy.
-* The code must be tested.
-* The Asciidoctor Documentation repository will build each projects' documentation for publication on the Asciidoctor website.
-* It will also build additional and alternate forms of documentation from content and code flagged and included throughout the repositories.
-
-// == Dependency and configuration requirements
-
-// Be brief, provide links to more detailed documentation
-
-== Directory structure
-
-Pending
 
 == Contributing instructions
 
 Pending
 
+=== Issues
+
+Use this repository's issue tracker to file issues and feature requests regarding the goals of this repository and its documents.
+
 == Build instructions
 
-Pending
+See {infra-ref}[Infrastructure Goals and Planning] for more information.
 
 // == Copyright and licensing information
 
 // == Author(s)
 
-// == Thanks, acknowledgements, and credits
+// == Thanks, acknowledgments, and credits
 
-== Contact and help information
+== General Asciidoctor Contact and help information
 
 Project home page:: {homepage}
 
-Source repository:: {sources}
+Core source code repository:: {sources}
 
-Issue tracker:: {issues}
+Core issue tracker:: {issues}
 
-Mailinglist / forum:: {forum}
+Mailing list / forum:: {forum}
 
 GitHub organization:: {org}
 
