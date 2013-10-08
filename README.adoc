@@ -1,6 +1,7 @@
 = Asciidoctor Documentation
 :infra-ref: https://github.com/asciidoctor/asciidoctor-documentation/blob/master/infrastructure-goals-planning.adoc
 :templates-ref: https://github.com/asciidoctor/asciidoctor-documentation/tree/master/templates
+:readme-repo: https://github.com/asciidoctor/asciidoctor-documentation/blob/master/README.adoc
 :issue-docs: https://github.com/asciidoctor/asciidoctor-documentation/issues?state=open
 :homepage: http://asciidoctor.org
 :sources: https://github.com/asciidoctor/asciidoctor
