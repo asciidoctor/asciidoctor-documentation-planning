@@ -1,4 +1,7 @@
 = Asciidoctor Documentation
+ifdef::env-github[]
+:warning-caption: :warning:
+endif::[]
 :infra-ref: https://github.com/asciidoctor/asciidoctor-documentation/blob/master/infrastructure-goals-planning.adoc
 :templates-ref: https://github.com/asciidoctor/asciidoctor-documentation/tree/master/templates
 :readme-repo: https://github.com/asciidoctor/asciidoctor-documentation/blob/master/README.adoc
@@ -9,7 +12,10 @@
 :forum: http://discuss.asciidoctor.org
 :org: https://github.com/asciidoctor
 
-CAUTION: *The information and processes in this README are being brainstormed and discussed. 
+WARNING: *This repository has been archived.*
+If you'd like to contribute to the documentation, see the https://github.com/asciidoctor/docs.asciidoctor.org[docs.asciidoctor.org repository].
+
+*The information and processes in this README are being brainstormed and discussed. 
 They have not been implemented!*
 
 But speaking of brainstorming, we're looking for people to add some *thunder and lightning*!
